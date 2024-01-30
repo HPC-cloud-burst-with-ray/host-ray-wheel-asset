@@ -1,6 +1,6 @@
 # host the compiled wheel file
 # get current node's ip address
-node_ip=$(hostname -I | awk '{print $1}')
+node_ip=`curl http://checkip.amazonaws.com`
 
 # set ray_path to be first argument
 ray_path=$1
@@ -18,4 +18,4 @@ echo "hosting wheel file: $wheel_file"
 echo "use the following curl command to download the wheel file"
 echo "curl http://$node_ip:8888/$wheel_file -o $wheel_file"
 
-python3 -m http.server 8888 &
+python3 -m http.server 8888
