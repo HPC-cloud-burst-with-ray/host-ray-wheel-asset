@@ -1,5 +1,7 @@
 # host the compiled wheel file
 # get current node's ip address
+set -e
+
 node_ip=`curl http://checkip.amazonaws.com`
 
 # set ray_path to be first argument

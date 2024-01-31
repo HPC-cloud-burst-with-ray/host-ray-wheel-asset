@@ -1,5 +1,10 @@
 # prepare for environment according to the ray official document
-ray_path = $1
+
+set -e
+
+ray_path=$1
+
+echo "ray path: $ray_path"
 
 # install dependencies: nvm, node, npm, bazel
 cd $ray_path
